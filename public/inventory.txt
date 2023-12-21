@@ -40,3 +40,9 @@
 17 pmfd 21/12/2023
 17 pexp 21/01/2024
 17 pqty 4
+18 pid 18
+18 pname pasta
+18 pprice 25
+18 pmfd 21/12/2023
+18 pexp 21/01/2024
+18 pqty 15
