@@ -34,3 +34,9 @@
 16 pmfd 24/12/2023
 16 pexp 22/03/2024
 16 pqty 15
+17 pid 17
+17 pname noodles
+17 pprice 30
+17 pmfd 21/12/2023
+17 pexp 21/01/2024
+17 pqty 4
