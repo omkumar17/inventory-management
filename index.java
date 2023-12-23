@@ -57,7 +57,7 @@ class Login {
             while ((line = br.readLine()) != null) {
                 String detail[] = line.split(" ");
                 if (detail.length == 2 && detail[0].equals(name) && detail[1].equals(pass)) {
-                    System.out.println("welcome " + detail[0]);
+                    System.out.println("\nwelcome " + detail[0]+"\n");
                     flag = true;
                     break;
                 }
@@ -96,9 +96,11 @@ class Login {
         if (flag == true) {
             Scanner ob = new Scanner(System.in);
             int ch;
+            String id="",head="",edit="";
             do {
                 System.out.println("1. View inventory details");
                 System.out.println("2. Enter product into inventory");
+                System.out.println("3. Edit file");
                 System.out.println("Enter your choice");
                 ch = ob.nextInt();
                 ob.nextLine();
@@ -109,10 +111,22 @@ class Login {
                     case 2:
                         insert(inventoryPath);
                         break;
+                    case 3:
+                        view(inventoryPath);
+                        System.out.println("\n\nEnter the id which you want to update");
+                        id=ob.next();
+                        System.out.println("Enter the column name which you want to update");
+                        head=ob.next();
+                        System.out.println("Enter the new value you want");
+                        edit=ob.next();
+                        update(inventoryPath,id,head,edit);
+                        System.out.println("\n\nUpdated list");
+                        view(inventoryPath);
+                        break;
                     default:
                         System.out.println("Invalid choice");
                 }
-            } while (ch != 1 && ch != 2);
+            } while (ch != 1 && ch != 2 && ch !=3);
             ob.close();
         }
     }
@@ -165,5 +179,31 @@ class Login {
             System.out.println("An error occurred while writing to the file: " + e.getMessage());
         }
 
+    }
+
+    public static void update(String inventoryPath, String id, String head, String edit) {
+        try (BufferedReader br = new BufferedReader(new FileReader(inventoryPath))) {
+            StringBuilder content = new StringBuilder();
+            String line;
+            String detail[];
+            while ((line = br.readLine()) != null) {
+                detail = line.split(" ");
+                if (detail.length == 3 && detail[0].equals(id) && detail[1].equals(head)) {
+                    detail[2] = edit;
+                    line = detail[0] + " " + detail[1] + " " + detail[2];
+                }
+                content.append(line).append("\n");
+            }
+            br.close();
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter(inventoryPath));
+            bw.write(content.toString());
+            bw.close();
+
+            System.out.println("File has been successfully edited.");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

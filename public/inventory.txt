@@ -3,7 +3,7 @@
 11 pprice 10
 11 pmfd 11/12/2023
 11 pexp 11/06/2024
-11 pqty 40
+11 pqty 50
 12 pid 12
 12 pname parle
 12 pprice 5
@@ -41,7 +41,7 @@
 17 pexp 21/01/2024
 17 pqty 4
 18 pid 18
-18 pname pasta
+18 pname veggie
 18 pprice 25
 18 pmfd 21/12/2023
 18 pexp 21/01/2024
