@@ -9,7 +9,7 @@
 12 pprice 5
 12 pmfd 11/12/2023
 12 pexp 11/04/2024
-12 pqty 10
+12 pqty 5
 13 pid 13
 13 pname cadbury
 13 pprice 20
@@ -21,19 +21,19 @@
 14 pprice 10
 14 pmfd 20/12/2023
 14 pexp 20/04/2024
-14 pqty 20
+14 pqty 9
 15 pid 15
 15 pname maggie
 15 pprice 5
 15 pmfd 11/12/2023
 15 pexp 11/02/2024
-15 pqty 3
+15 pqty 1
 16 pid 16
 16 pname nestle
 16 pprice 15
 16 pmfd 24/12/2023
 16 pexp 22/03/2024
-16 pqty 25
+16 pqty 23
 17 pid 17
 17 pname noodles
 17 pprice 30
@@ -45,4 +45,4 @@
 18 pprice 25
 18 pmfd 21/12/2023
 18 pexp 21/01/2024
-18 pqty 15
+18 pqty 10

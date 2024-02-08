@@ -164,7 +164,7 @@ class Login {
             do {
                 System.out.println("press any key");
                 ob.nextLine();
-                System.out.println("Enter pid");
+                System.out.println("Enter initial pid");
                 String id = ob.nextLine();
                 for (int i = 0; i < inarr.length; i++) {
                     System.out.println("Enter " + inarr[i]);
@@ -230,7 +230,7 @@ class Login {
             bw.write(content.toString());
             bw.close();
 
-            System.out.println("File has been successfully edited.");
+            // System.out.println("File has been successfully edited.");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -313,5 +313,4 @@ class Login {
         }
         ob.close();
     }
-
 }
